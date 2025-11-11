@@ -1,0 +1,20 @@
+[package]
+name = "unified-platform"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Example Maintainer <maintainer@example.com>"]
+description = "Prototype showing how axplat-style platform configuration can own axdriver-style drivers."
+readme = "README.md"
+keywords = ["os", "driver", "hal", "axplat", "axdriver"]
+
+[lib]
+name = "unified_platform"
+path = "src/lib.rs"
+
+[dependencies]
+spin = { version = "0.9", default-features = false, features = ["mutex", "spin_mutex", "once"] }
+heapless = { version = "0.8", default-features = false }
+
+[dev-dependencies]
+once_cell = "1.19"
